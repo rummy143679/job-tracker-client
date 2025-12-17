@@ -13,7 +13,7 @@ const emptyJob = {
   notes: "",
 };
 
-export default function Dashboard() {
+export default function Dashboard({ onLogout }) {
   const [jobs, setJobs] = useState([]);
   const [form, setForm] = useState(emptyJob);
   const [editingId, setEditingId] = useState(null);
@@ -31,8 +31,8 @@ export default function Dashboard() {
       setJobs(data);
     } catch (err) {
       if (err.response?.status === 401) {
-        localStorage.clear();
-        navigate("/login");
+        onLogout?.();
+        navigate("/login", { replace: true });
       }
     } finally {
       setLoading(false);
@@ -41,6 +41,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     fetchJobs();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filter, search]);
 
   function handleChange(e) {
@@ -88,8 +89,8 @@ export default function Dashboard() {
   }
 
   function logout() {
-    localStorage.clear();
-    navigate("/login");
+    onLogout?.(); // clears token + localStorage in App
+    navigate("/login", { replace: true });
   }
 
   return (
