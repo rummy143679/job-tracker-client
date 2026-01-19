@@ -1,16 +1,40 @@
-# React + Vite
+# Job Tracker Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **React + Vite frontend** for a Job Tracking application — designed to help users track their job applications, statuses, notes, interview progress, and more.
 
-Currently, two official plugins are available:
+> This client is intended to be used with a complete job tracker system (backend API). You can connect it with your own backend to store and manage job application data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🧠 Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Layer | Tech |
+|-------|------|
+| Frontend | React |
+| Bundler | Vite |
+| Styling | Tailwind CSS |
+| Linter | ESLint |
+| Formatter | Prettier |
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+
+✔ Add a new job application  
+✔ View all job applications  
+✔ Update job status (Applied, Interview, Accepted, Rejected)  
+✔ Delete applications  
+✔ Search & filter jobs (optional/extendable)  
+✔ Responsive and modern UI
+
+> ⚙️ *Backend API integration is required for full CRUD functionality.*
+
+---
+
+## 📦 Installation
+
+1. **Clone the client repository**
+
+```bash
+git clone https://github.com/rummy143679/job-tracker-client.git
+cd job-tracker-client
