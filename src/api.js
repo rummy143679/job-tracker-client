@@ -5,7 +5,7 @@ import axios from "axios";
 //   import.meta.env.VITE_API_BASE || "http://localhost:5000/api";
 
 const API_BASE =
-  import.meta.env.VITE_API_BASE || "https://jobtracker4-8wxafy46.b4a.run/api";
+  import.meta.env.VITE_API_BASE || "https://jobtracker5-bmlfrkns.b4a.run/api";
 
 
 
